@@ -63,4 +63,10 @@ func main() {
 		// :n é a posição onde ele está fazendo a leitura
 		fmt.Println(string(buffer[:n]))
 	}
+
+	err = os.Remove("arquivo.txt")
+	if err != nil {
+		panic(err)
+	}
+	println("Arquivo removido com sucesso!")
 }
